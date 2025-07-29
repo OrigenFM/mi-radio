@@ -10,7 +10,7 @@ nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
 .menu-toggle {background:none; border:none; color:white; font-size:24px; display:none;}
 
 /* Hero */
-.hero {background:url('assets/bg-hero.jpg') center/cover no-repeat; color:white; text-align:center; height:80vh; display:flex; align-items:center; justify-content:center; position:relative;}
+.hero {background:url('assets/bg-hero.png') center/cover no-repeat; color:white; text-align:center; height:80vh; display:flex; align-items:center; justify-content:center; position:relative;}
 .hero .overlay {background:rgba(0,0,0,0.5); padding:40px; border-radius:15px;}
 .btn {background:#ffc371; padding:12px 20px; border-radius:25px; color:white; text-decoration:none; font-weight:bold; display:inline-block; margin-top:15px;}
 .btn:hover {background:#e6a857;}
