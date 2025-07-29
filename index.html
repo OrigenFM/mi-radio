@@ -1,58 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Origen | Donde Empezamos </title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #111;
-      color: #fff;
-      padding: 20px;
-    }
-    img.logo {
-      width: 100px;
-      margin-top: 20px;
-    }
-    audio {
-      margin-top: 20px;
-      width: 300px;
-    }
-    .social a {
-      margin: 0 10px;
-      color: #1db954;
-      text-decoration: none;
-    }
-    .social a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Radio Origen 98.9 - Donde Empezamos. Escuchanos en vivo, conoce nuestra programación y contactanos.">
+  <meta name="theme-color" content="#ff5f6d">
+  <title>Radio Origen - 98.9 - Donde Empezamos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Radio Origen Logo">
+      <div>
+        <h1>Radio Origen 98.9</h1>
+        <p>Donde Empezamos</p>
+      </div>
+    </div>
+    <nav id="menu">
+      <a href="#programacion">Programación</a>
+      <a href="#mision">Nuestra Misión</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </header>
 
-  <!-- LOGO -->
-  <img src="logo.png" alt="Logo de la radio" class="logo">
+  <section class="hero">
+    <div class="overlay">
+      <h2>¡Escuchá en vivo!</h2>
+      <p>La mejor música, programas en vivo y toda la energía que nos caracteriza.</p>
+      <div class="reproductor">
+        <p>🔴 Transmisión en vivo:</p>
+        <audio controls autoplay>
+          <source src="https://tusradio-streaming-link.com/stream" type="audio/mpeg">
+          Tu navegador no soporta el reproductor de audio.
+        </audio>
+      </div>
+      <a href="#programacion" class="btn">Ver Programación</a>
+    </div>
+  </section>
 
-  <!-- SLOGAN -->
-  <h1>¡Sumate a lo nuevo!</h1>
+  <section id="programacion">
+    <h2>📅 Nuestra Programación</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>☀️ Mañanas Origen</h3>
+        <p>De 8:00 a 11:00 hs, noticias y buena onda para empezar el día.</p>
+      </div>
+      <div class="card">
+        <h3>🎶 Hits del Día</h3>
+        <p>De 15:00 a 18:00 hs, los mejores éxitos y tendencias musicales.</p>
+      </div>
+      <div class="card">
+        <h3>🌙 Noches Relax</h3>
+        <p>De 20:00 a 23:00 hs, música tranquila para terminar bien el día.</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- REPRODUCTOR -->
-  <p>🎧 Escuchanos en vivo</p>
-  <audio controls autoplay>
-    <source src="https://TULINKDESTREAMING.com/stream" type="audio/mpeg">
-    Tu navegador no soporta audio HTML5.
-  </audio>
+  <section id="mision">
+    <h2>💡 Nuestra Misión</h2>
+    <p>
+      En <strong>Radio Origen 98.9</strong> creemos en el poder de la música y la comunicación
+      para unir a las personas. Nuestro objetivo es ofrecer contenido fresco,
+      programas innovadores y un espacio donde todos puedan sentirse parte de la comunidad.
+    </p>
+  </section>
 
-  <!-- REDES SOCIALES -->
-  <div class="social" style="margin-top: 30px;">
-    <p>📱 Seguinos en redes:</p>
-    <a href="https://facebook.com/TUUSUARIO" target="_blank">Facebook</a>
-    <a href="https://instagram.com/TUUSUARIO" target="_blank">Instagram</a>
-    <a href="https://youtube.com/@TUUSUARIO" target="_blank">YouTube</a>
-  </div>
+  <section id="contacto">
+    <h2>📩 Contacto Comercial</h2>
+    <p>¿Querés publicitar o ser parte de nuestra radio? Escribinos:</p>
+    <p><strong>Email:</strong> <a href="mailto:contacto@radioorigen.com">origen.empezamos@gmail.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/5491123456789" target="_blank">3571318431</a></p>
+  </section>
 
+  <footer>
+    © 2025 Radio Origen - 98.9 - Donde Empezamos |
+    <a href="#">Facebook</a> | <a href="#">Instagram</a>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
 </body>
 </html>
